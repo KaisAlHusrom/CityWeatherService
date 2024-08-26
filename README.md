@@ -109,8 +109,7 @@ Embark on a virtual world tour with the CCServices web application. This feature
     ```bash
     npm install
 
-4. **Add config.json file:**
-    add config.json with the following:
+4. **Add config.json file with the following:**
     ```json
     {
         "api_key": {your_GeoDB_Cities_API_KEY},
