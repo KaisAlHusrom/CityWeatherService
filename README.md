@@ -25,7 +25,75 @@ Embark on a virtual world tour with the CCServices web application. This feature
 - **Global State Management:** Redux is used for managing global states such as user preferences and mode selection (light/dark).
 
 ## Project Structure
-|--node_modules |--src/ |-- Assets/ | |-- city.jpg | |-- currencies.jpg |-- Components/ | |-- AdminMainButton/ | |-- AdminMainButton.jsx | |-- CustomModal/ | |-- CustomModal.jsx | |-- CustomDrawer/ | |-- CustomDrawer.jsx | |--AppCard.jsx | |--CityCard.jsx | |--CityDetailsCard.jsx | |--ContentComponent.jsx | |--Links.jsx | |--LocationSection.jsx | |--MainMenuList.jsx | |--NearCities.jsx | |--NearCitiesPopover.jsx | |--SearchSection.jsx | |--SettingsDrawer.jsx | |--WeatherCard.jsx | |-- Helpers/ | |-- countriesName.json | |-- DateHelpers.js | |-- Pages/ | |-- MainPage/ | | |--MainPage.jsx | |-- CitiesPage/ | | |--CitiesPage.jsx | |-- ErrorPage/ | | |--ErrorPage.jsx | |-- MainPage/ | | |--MainPage.jsx | |-- NotFoundPage/ | | |--NotFoundPage.jsx | |-- index.jsx |-- Redux/ | |-- Slices/ | |-- langSlice.js | |-- modeSlice.js | |-- Store.js | |-- Routers/ | |-- Links/ | | |--MainMenu.jsx | |-- CustomRouterProvider.jsx | |-- Services/ | |-- citiesService.js | |-- currencyService.js | |-- weatherService.js | |-- Theme/ | |-- CustomThemeProvider.jsx |-- App.jsx |-- App.css |-- main.jsx |-- index.html |-- vite.config.js |-- package.json |-- package-lock.json |-- README.md
+|--node_modules
+|--src/
+|-- Assets/
+|     |-- city.jpg
+|	|-- currencies.jpg
+|-- Components/
+|   |-- AdminMainButton/
+|       |-- AdminMainButton.jsx
+|   |-- CustomModal/
+|       |-- CustomModal.jsx
+|   |-- CustomDrawer/
+|       |-- CustomDrawer.jsx
+|   |--AppCard.jsx
+|   |--CityCard.jsx
+|   |--CityDetailsCard.jsx
+|   |--ContentComponent.jsx
+|   |--Links.jsx
+|   |--LocationSection.jsx
+|   |--MainMenuList.jsx
+|   |--NearCities.jsx
+|   |--NearCitiesPopover.jsx
+|   |--SearchSection.jsx
+|   |--SettingsDrawer.jsx
+|   |--WeatherCard.jsx
+|
+|-- Helpers/
+|   |-- countriesName.json
+|   |-- DateHelpers.js
+|
+|-- Pages/
+|   |-- MainPage/
+|   |  |--MainPage.jsx
+|   |-- CitiesPage/
+|   |  |--CitiesPage.jsx
+|   |-- ErrorPage/
+|   |  |--ErrorPage.jsx
+|   |-- MainPage/
+|   |  |--MainPage.jsx
+|   |-- NotFoundPage/
+|   |  |-- NotFoundPage.jsx
+|   |-- index.jsx
+|-- Redux/
+|   |-- Slices/
+|       |-- langSlice.js
+|       |-- modeSlice.js
+|   |-- Store.js
+|
+|-- Routers/
+|   |-- Links/
+|   |   |--MainMenu.jsx
+|   |-- CustomRouterProvider.jsx
+|
+|-- Services/
+|   |-- citiesService.js
+|   |-- currencyService.js
+|   |-- weatherService.js
+|
+|-- Theme/
+|   |-- CustomThemeProvider.jsx
+|-- App.jsx
+|-- App.css
+|-- main.jsx
+|-- index.html
+|-- vite.config.js
+|-- package.json
+|-- package-lock.json
+|-- README.md
+|-- config.json 
+
 
 ## Installation and Setup
 
@@ -41,7 +109,15 @@ Embark on a virtual world tour with the CCServices web application. This feature
     ```bash
     npm install
 
-4. **Start the development server:**
+4. **Add config.json file:**
+    add config.json with the following:
+    ```json
+    {
+        "api_key": {your_GeoDB_Cities_API_KEY},
+        "weather_api_key": {your_weather_api_key}
+    }
+
+5. **Start the development server:**
     ```bash
     npm run dev
 
